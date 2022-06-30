@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="es">
+    <head>
+        <meta charset="UTF-8">
+        <title>Contacto Barbería alura</title>
+        <link rel="stylesheet" href="../../Challenges/Logica1_challenge/reset.css"> <!--reset.css-->
+        <link rel="stylesheet" href="style.css">
+    </head>
+    <body>
+        <header>
+            <div class="caja">
+                <h1><img src="./logo (1).png"></h1>
+                <nav>
+                    <ul>
+                        <li><a href="barberia.html">Home</a></li>
+                        <li><a href="productos.html">Productos</a></li>
+                        <li><a href="#">Contacto</a></li> <!--contactos.html-->
+                    </ul>
+                </nav>
+            </div>
+        </header>
+    </body>
+    <main>
+        <form>
+            <label for="nombreapellido">Nombre y Apellido</label>
+            <input type="text" id="nombreapellido" class="input-padron" required>
+
+            <label for="correoelectronico">Correro electrónico</label>
+            <input type="email" id="correoelectronico" class="input-padron" required placeholder="email@dominio.com">
+
+            <label for="telefono">Teléfono</label>
+            <input type="tel" id="telefono" class="input-padron" required placeholder="(xx) xxxx xxxx">
+
+            <label for="mensaje">Mensaje</label> <!--sector textarea para escribir algun mensaje-->
+            <textarea cols="70" rows="10" id="mensaje" class="input-padron" required></textarea>
+
+            <fieldset> <!--agrupa items que pertenecen al mismo grupo-->
+                <legend>¿Cómo le gustaría que lo contactemos?</legend>
+                <!--sector seleccion tipo radio-->
+                <label for="radio-email"><input type="radio" name="contacto" value="email" id="radio-email">Email</label> 
+                <!--tipo radio siempre va con value-->
+                <!--con la propiedad name=contacto logro que sean todos del mismo grupo y solo pueda seleccionarse uno solo-->
+                <label for="radio-telefono"><input type="radio" name="contacto" value="telefono" id="radio-telefono">Telefono</label>                 
+                <label for="radio-whatsapp"><input type="radio"name="contacto" value="whatsapp" id="radio-whatsapp" checked>Whatsapp</label> 
+            </fieldset>
+            <!--sector eleccion de opciones-->
+            <fieldset> <!--agrupa items que pertenecen al mismo grupo-->
+                <legend>¿En cuál horario prefiere ser atendido?</legend>
+                <select>
+                    <option>Mañana</option>
+                    <option>Tarde</option>
+                    <option>Noche</option>
+                </select>
+            </fieldset>
+            <!--sector cajita check-->
+            <label class="checkbox"><input type="checkbox" checked>¿Le gustaría recibir novedades de la Barbería Alura?</label>
+            <input type="submit" value="Enviar formulario" class="enviar"><!--sector enviar-->
+        </form>
+        <table>
+            <thead>
+                <tr>
+                    <th>Día</th>
+                    <th>Horario</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>Lunes</td>
+                    <td>08h - 20h</td>
+                </tr>
+                <tr>
+                    <td>Miércoles</td>
+                    <td>08h - 20h</td>
+                </tr>
+                <tr>
+                    <td>Viernes</td>
+                    <td>08h - 20h</td>
+                </tr>
+            </tbody>
+        </table>
+    </main>
+    <footer>
+        <img src="./logo-blanco.png" alt="Logo de pie de pagina">
+        <p class="copyright">&copy Copyright Barbería Alura 2022</p>
+    </footer>
+</html>
